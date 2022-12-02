@@ -1,0 +1,21 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<div class="container">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><% game.game %> <%= game.game_id %></h5>
+        
+                    <a href="/game/"><button type="button" class="btn btn-outline-secondary" id="back">back</button></a>
+                   
+                    <form action="http://localhost:3000/game/delete/<%= game.game_id %>" method="post">
+                        <button type="submit">delete game</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+</div>
+
+<%- include('../partials/footer') %>

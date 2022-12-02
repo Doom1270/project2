@@ -1,0 +1,38 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<h1><u>current running Games</u></h1> 
+<a href="/addgame/"><button type="button" class="btn btn-outline-secondary" >add game</button></a>
+<div class="container">
+    <% gamesArray.forEach((game)=> { %>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><%= game.name %></h5>
+                    
+                    <a href="/game/<%= game.game_id %>"><button type="button" class="btn btn-outline-secondary" id="edit">edit</button></a>
+                </div>
+            </div>
+        </div>
+    <% }) %>   
+</div>
+
+<style>
+h1 {
+   text-align:center;
+}
+.col-4 {
+    text-align: left;
+}
+.btn.btn-outline-secondary{
+    text-align:center;
+}
+
+
+
+
+
+</style>
+<%- include('../partials/footer') %>
+
+
+
