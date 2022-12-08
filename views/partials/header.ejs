@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" >The Stone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/games">Games</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/player">Players</a>
+
+          </li>
+
+          
+          <select name="pages" id="webpage" onchange="change()">
+            <a location.assign(localhost:3000)><option value="home" id="home">home</option> </a>
+            <a href="localhost:3000/games"><option value="games" id="games">games</option> </a>
+            <option value="players">Players</option>
+           <a href="localhost:3000/about">
+             <option value="about">about</option>
+           </a>
+          </select> 
+      <!-- underneath is for dropdown javascript needed -->
+          <script>
+            function change(){
+              console.log(document.getElementById("webpage").value);
+           
+            }
+            
+          
+            
+            
+          </script>
+          
+        
+      
+      </div>
+    </div>
+  </nav>
