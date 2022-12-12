@@ -1,20 +1,24 @@
 <%- include('../partials/head') %>
 <%- include('../partials/header') %>
 <h1><u>players</u></h1> 
+<a href="/" type="button" class="btn btn-primary">Home Page</a>
+<div></div>
 <a href="/addPlayer/"><button type="button" class="btn btn-outline-secondary" >add player</button></a>
 <div class="container">
+    <div class="row">
     <% playerArray.forEach((player)=> { %>
         <div class="col-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title"><%= player.name %></h5>
                     <h5 class="card-title"><%= player.email %></h5>
-                    <a href="/player/<%= player.player_id %>"><button type="button" class="btn btn-outline-secondary" >edit</button></a>
+                    <a href="/player/<%= player.player_id %>"><button type="button" class="btn btn-outline-secondary" id="editbut" >edit</button></a>
+                    <a href="/gamespec/<%=player.player_id %>"><button type="button" class="btn btn-outline-secondary">view games</button></a>
                 </div>
             </div>
         </div>
     <% }) %>   
-</div>
+</div></div>
 
 <style>
 h1 {
@@ -23,7 +27,7 @@ h1 {
 .col-4 {
     text-align: left;
 }
-.btn.btn-outline-secondary{
+ btn-outline-secondary{
     text-align:center;
 }
 

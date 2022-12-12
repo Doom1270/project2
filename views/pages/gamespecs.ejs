@@ -1,0 +1,26 @@
+
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<div class="container">
+    <div class="row">
+        <% playergamesArray.forEach((game)=> { %>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= game.Gamename %></h5>
+                        <div></div><strong> Duration: </strong>  <b> <%= game.duration %>  </b>
+                        <br>
+                        <strong>Team Size: </strong> <b> <%= game.team_size %> </b>
+                        <br>
+                        <strong>ID: </strong> <b> <%= game.game_id %> </b>
+             
+                    </div>
+                    <a href="/game/<%= game.game_id %>"><button type="button" class="btn btn-outline-secondary" id="edit">edit</button> </a>
+                </div>
+            </div>
+        <% }) %>  
+    </div>
+</div>
+    
+    
+    <%- include('../partials/footer') %>

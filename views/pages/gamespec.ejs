@@ -1,0 +1,21 @@
+
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<form action="http://localhost:3000/gamespec/edit/<%= player.player_id %>" method ="post">
+        <% playerGamesArray.forEach((player)=> { %>
+    <div class="form-check">
+    <input name="game_id" class="form-check-input" type="checkbox" value="<%= player.game_id %>">
+    <label class="form-check-label" for="flexCheckDefault">
+    <%= player.name %>
+    </label>
+    </div>
+    <% }) %> 
+  <button type="submit" class="btn btn-primary">Edit the games they play</button>
+</form>
+
+
+
+
+
+<%- include('../partials/footer') %>

@@ -1,5 +1,5 @@
 const { response } = require("express");
-
+const gamespecController = require("../controllers/gamespecController");  
 const router = (app ) => {
     const gamesController = require("../controllers/game");
     app.get("/game", gamesController.getAllgames);
@@ -29,7 +29,6 @@ const router = (app ) => {
     app.get("/game/:id", gamesController.getgameById);
 
 
-    app.get("/game:id", gamesController.getgameById);
 
 
 
@@ -42,8 +41,9 @@ const router = (app ) => {
     });
 
     app.post("/player/edit/:id", playerController.editPlayer);
-
-
+   
+    app.get("/gamespec/:id", gamespecController.getPlayergamesById)
+    app.post("/gamespec/edit/:id", gamespecController.editPlayerGameSpecialisations)
 }
 
 module.exports = router;
